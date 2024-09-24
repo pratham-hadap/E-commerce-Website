@@ -150,6 +150,7 @@ export const Home = ({ searchParams }) => {
         const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct');
         // const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com');
         setProducts(response.data.data);
+        console.log(response.data.data)
         setLoading(false);
       } catch (err) {
         console.error('Error while fetching products:', err);
@@ -196,7 +197,8 @@ export const Home = ({ searchParams }) => {
               <img
                 className="rounded-md w-full h-64 object-cover"
                 // src={`http://localhost:9000/files/${product.image}`}
-                src={`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct/files/${product.image}`}
+                // src={`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct/files/${product.image}`}
+                src={product.image}
                 alt={product.name}
               />
               <h2 className="text-lg font-semibold mt-2">{product.name}</h2>

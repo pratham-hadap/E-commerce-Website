@@ -150,7 +150,7 @@ export const Home = ({ searchParams }) => {
         const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct');
         // const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com');
         setProducts(response.data.data);
-        console.log(response.data.data)
+        console.log('images',response.data.data.image)
         setLoading(false);
       } catch (err) {
         console.error('Error while fetching products:', err);

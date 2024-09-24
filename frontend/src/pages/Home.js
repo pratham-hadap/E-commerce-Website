@@ -146,7 +146,8 @@ export const Home = ({ searchParams }) => {
       try {
         // const response = await axios.get('http://localhost:9000/api/v1/getProduct');
         // const response = await axios.get(process.env.Backend_url);
-        const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com/api/v1');
+        // const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com/api/v1');
+        const response = await axios.get('https://e-commerce-website-backend-xfir.onrender.com');
         setProducts(response.data.data);
         setLoading(false);
       } catch (err) {

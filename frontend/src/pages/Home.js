@@ -195,7 +195,8 @@ export const Home = ({ searchParams }) => {
             <div key={product._id} className="bg-white shadow-lg rounded-lg overflow-hidden p-4">
               <img
                 className="rounded-md w-full h-64 object-cover"
-                src={`http://localhost:9000/files/${product.image}`}
+                // src={`http://localhost:9000/files/${product.image}`}
+                src={`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct/files/${product.image}`}
                 alt={product.name}
               />
               <h2 className="text-lg font-semibold mt-2">{product.name}</h2>

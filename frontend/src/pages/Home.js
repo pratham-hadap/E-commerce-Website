@@ -144,7 +144,8 @@ export const Home = ({ searchParams }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/v1/getProduct');
+        // const response = await axios.get('http://localhost:9000/api/v1/getProduct');
+        const response = await axios.get(process.env.Backend_url);
         setProducts(response.data.data);
         setLoading(false);
       } catch (err) {

@@ -3,10 +3,11 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path');
 const Razorpay = require("razorpay");
+require('dotenv').config();
 
 const app = express();
 const corsOptions ={
-    origin:"http://localhost:3000",
+    origin:"http://localhost:3001",
     method:"GET, POST, PUT, DELETE, PATCH, HEAD",
     Credential:true
 };
@@ -22,8 +23,8 @@ app.use(fileUpload());
 
 
 const razorpay = new Razorpay({
-    key_id: "rzp_test_OOjAFvbkxe9jYQ",
-    key_secret: "8jylQFg5dcwzoMsZPnxphiRa",
+    key_id: process.env.RAZORPAY_KEY ,
+    key_secret: process.env.RAZORPAY_SECRET ,
   });
 
 
@@ -47,7 +48,7 @@ const razorpay = new Razorpay({
   });
 
 
-require('dotenv').config();
+
 const PORT = process.env.PORT || 4000
 
 app.use(express.json());

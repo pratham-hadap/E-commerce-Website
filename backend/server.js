@@ -7,7 +7,8 @@ require('dotenv').config();
 
 const app = express();
 const corsOptions ={
-    origin:"http://localhost:3001",
+    // origin:"http://localhost:3001",
+    origin: ["http://localhost:3001", "https://e-commerce-website-git-main-pratham-hadaps-projects.vercel.app"],
     method:"GET, POST, PUT, DELETE, PATCH, HEAD",
     Credential:true
 };

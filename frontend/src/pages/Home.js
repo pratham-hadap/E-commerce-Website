@@ -198,8 +198,8 @@ export const Home = ({ searchParams }) => {
               <img
                 className="rounded-md w-full h-64 object-cover"
                 // src={`http://localhost:9000/files/${product.image}`}
-                // src={`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct/files/${product.image}`}
-                src={product.image}
+                src={`https://e-commerce-website-backend-xfir.onrender.com/files/${product.image}`}
+                // src={product.image}
                 alt={product.name}
               />
               <h2 className="text-lg font-semibold mt-2">{product.name}</h2>

@@ -123,7 +123,7 @@ const Cart = () => {
     const shippingAddress = `${road}, ${post}, ${city}, ${taluka}, ${district}, Pin: ${pin}`;
 
     const options = {
-      key: "rzp_test_OOjAFvbkxe9jYQ", // Replace with your Razorpay test API key
+      key: process.env.RAZORPAY_KEY , // Replace with your Razorpay test API key
       amount: totalAmount * 100, // Amount in smallest currency unit (e.g., cents)
       currency: "INR", // Currency code
       name: "Your Shop Name",

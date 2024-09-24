@@ -170,7 +170,8 @@ const CartItem = ({ item }) => {
       <div className="flex-shrink-0">
         <img
           className="rounded-md w-full h-40 md:h-48 lg:h-64 object-cover"
-          src={`http://localhost:9000/files/${item.image}`}
+          // src={`http://localhost:9000/files/${item.image}`}
+          src={`https://e-commerce-website-backend-xfir.onrender.com/files/${item.image}`}
           alt={item.name}
         />
       </div>

@@ -140,7 +140,8 @@ import { useQuery } from 'react-query';
 
 // Function to fetch products
 const fetchProducts = async (page) => {
-  const response = await axios.get(`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct?page=${page}&limit=4`);
+  // const response = await axios.get(`https://e-commerce-website-backend-xfir.onrender.com/api/v1/getProduct?page=${page}&limit=4`);
+  const response = await axios.get(`https://fakestoreapi.com/products`);
   return response.data.data; // Returning product data from API
 };
 

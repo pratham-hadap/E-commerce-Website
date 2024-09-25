@@ -93,7 +93,7 @@ export const Home = ({ searchParams }) => {
               />
               {/* <h2 className="text-lg font-semibold mt-2">{product.name}</h2> */}
               <div>
-                <p className="w-40 truncatev font-bold">{post.title.split(" ").slice(0,5).join(" ") + "..."}</p>
+                <p className="w-40 truncatev font-bold">{product.title.split(" ").slice(0,5).join(" ") + "..."}</p>
               </div>
               <p className="text-gray-600 mt-1">{product.description.split(" ").slice(0,10).join(" ") + "..."}</p>
               <p className="text-lg font-bold mt-1">Price: ₹{product.price}</p>

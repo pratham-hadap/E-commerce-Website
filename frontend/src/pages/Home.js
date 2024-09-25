@@ -83,7 +83,7 @@ export const Home = ({ searchParams }) => {
           {filteredProducts.map((product) => (
             <div key={product._id} className="bg-white shadow-lg rounded-lg overflow-hidden p-4">
               <img
-                className="rounded-md w-full h-64 object-cover"
+                className="rounded-md w-full h-[180px] object-cover"
                 // src={`http://localhost:9000/files/${product.image}`}
                 loading='lazy'
                 // src={`https://e-commerce-website-backend-xfir.onrender.com/files/${product.image}`}
@@ -91,8 +91,11 @@ export const Home = ({ searchParams }) => {
                 // src={product.image}
                 alt={product.name}
               />
-              <h2 className="text-lg font-semibold mt-2">{product.name}</h2>
-              <p className="text-gray-600 mt-1">{product.description}</p>
+              {/* <h2 className="text-lg font-semibold mt-2">{product.name}</h2> */}
+              <div>
+                <p className="w-40 truncatev font-bold">{post.title.split(" ").slice(0,5).join(" ") + "..."}</p>
+              </div>
+              <p className="text-gray-600 mt-1">{product.description.split(" ").slice(0,10).join(" ") + "..."}</p>
               <p className="text-lg font-bold mt-1">Price: ₹{product.price}</p>
               <div>
                 {cart.some((p) => p._id === product._id) ? (

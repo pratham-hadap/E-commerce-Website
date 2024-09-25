@@ -180,7 +180,8 @@ const CartItem = ({ item }) => {
       {/* Product Details */}
       <div className="flex flex-col justify-between flex-grow">
         <div className="flex-grow">
-          <p className="text-lg font-bold">{item.name}</p>
+          {/* <p className="text-lg font-bold">{item.name}</p> */}
+          <p className="text-lg font-bold">{item.title}</p>
           <p className="text-sm text-gray-600 mb-2">
             {item.description.split(" ").slice(0, 10).join(" ") + "..."}
           </p>

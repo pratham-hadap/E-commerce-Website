@@ -48,8 +48,16 @@ export const Home = ({ searchParams }) => {
     return matchesBrand && matchesSize && matchesPrice;
   });
 
+  // if (loading) {
+  //   return <p className="text-center flex justify-center items-center spinner"></p>;
+  // }
+  
   if (loading) {
-    return <p className="text-center flex justify-center items-center spinner"></p>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (error) {

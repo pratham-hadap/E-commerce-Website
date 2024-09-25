@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { add, remove } from '../redux/Slices/CartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../components/Footer';
- import Home from './Home.css'
+ import Spinner from './Home.css'
 
 export const Home = ({ searchParams }) => {
   const [products, setProducts] = useState([]);

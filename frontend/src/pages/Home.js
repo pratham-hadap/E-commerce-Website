@@ -98,11 +98,13 @@ export const Home = ({ searchParams }) => {
               <p className="text-gray-600 mt-1">{product.description.split(" ").slice(0,10).join(" ") + "..."}</p>
               <p className="text-lg font-bold mt-1">Price: ₹{product.price}</p>
               <div>
-                {cart.some((p) => p._id === product._id) ? (
+                {/* {cart.some((p) => p._id === product._id) ? ( */}
+                {cart.some((p) => p._id === product.id) ? (
                   <button
                     className="mt-3 bg-gray-900 text-white rounded-md px-4 py-2 hover:bg-gray-800 transition duration-300"
                     onClick={() => {
-                      dispatch(remove(product._id));
+                      // dispatch(remove(product._id));
+                      dispatch(remove(product.id));
                       toast.error('Item removed');
                     }}
                   >
